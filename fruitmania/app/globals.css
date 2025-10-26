@@ -1,26 +1,46 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(248, 64, 172, 0.74);
+}
+
+
+.arcade {
+  display: flex;
+  flex-direction: row;
+height: 100vh;
+justify-content: center;
+align-items: center;
+}
+
+.gamewindow {
+
+  background-color:rgb(14, 17, 13);
+  border-style: ridge ridge groove groove;
+  border-width: 1rem;
+  border-color: #042d42;
+  width: 960px;
+  height: 540px;
+  margin:auto;
+  position: relative;
+  image-rendering: pixelated;
+}
+
+.cabinetdisplayimg {
+
+  image-rendering: pixelated;
+}
+
+.gamebackground {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+.yoanydisplay {
+  width: 320px;
+  height:320px;
+}
+
+.vyleydisplay {
+  width: 320px;
+  height: 400px;
 }
