@@ -3,6 +3,27 @@ body {
 }
 
 
+
+/* ==Game Container css== */
+
+.screen {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: start;
+}
+
+.title {
+    image-rendering: pixelated;
+    position: absolute;
+
+}
+
+.fruittitle {
+  width:800px;
+  height:160px;
+}
+
 .arcade {
   display: flex;
   flex-direction: row;
