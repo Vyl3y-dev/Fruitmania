@@ -8,39 +8,38 @@ body {
 
 .screen {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
-  align-items: start;
 }
 
 .title {
-    image-rendering: pixelated;
-    position: absolute;
+  image-rendering: pixelated;
+  position: absolute;
 
 }
 
 .fruittitle {
-  width:800px;
-  height:160px;
+  width: 800px;
+  height: 160px;
 }
 
 .arcade {
   display: flex;
   flex-direction: row;
-height: 100vh;
-justify-content: center;
-align-items: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .gamewindow {
 
-  background-color:rgb(14, 17, 13);
+  background-color: rgb(14, 17, 13);
   border-style: ridge ridge groove groove;
   border-width: 1rem;
   border-color: #042d42;
   width: 960px;
   height: 540px;
-  margin:auto;
+  margin: auto;
   position: relative;
   image-rendering: pixelated;
 }
@@ -50,18 +49,112 @@ align-items: center;
   image-rendering: pixelated;
 }
 
-.gamebackground {
-  width: 100%;
-  height: 100%;
-  image-rendering: pixelated;
-}
-
 .yoanydisplay {
   width: 320px;
-  height:320px;
+  height: 320px;
 }
 
 .vyleydisplay {
   width: 320px;
   height: 400px;
+}
+
+.fullbasket {
+  image-rendering: pixelated;
+}
+
+.fullbasketdisplay {
+  width:960px;
+  height: 160px;
+  position: relative;
+  bottom: 160px;
+}
+
+/* MenuScreen Stuff css */
+
+.menuscreen>div {
+
+  image-rendering: pixelated;
+}
+
+.fruitmenubg {
+  width: 960px;
+  height: 540px;
+
+  
+  position: relative;
+}
+
+.fruitmenutitle {
+  width: 640px;
+  height: 128px;
+  position: absolute;
+  top: 64px;
+  left: 160px;
+  z-index: 10;
+}
+
+.menuoptions {
+  position: absolute;
+  top: 250px;
+  left: 372px;
+  font-family:'Press Start 2P', monospace;
+  font-weight: 400px;
+  font-size: 32px;;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+  z-index: 10;
+}
+
+/* fruit rain in menu screen */
+
+.rainfruit {
+  
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fruit {
+  position: absolute;
+  top: 0px;
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-32px);
+  }
+  100% {
+    transform: translateY(600px);
+  }
+}
+
+.fruit:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+.fruit:nth-child(2) {
+  left: 50%;
+  animation-delay: .5s;
+}
+.fruit:nth-child(3) {
+  left: 75%;
+  animation-delay: 1s;
+}
+.fruit:nth-child(4) {
+  left: 60%;
+  animation-delay: 3s;
+}
+.fruit:nth-child(5) {
+  left: 15%;
+  animation-delay: 2s;
+}
+.fruit:nth-child(6) {
+  left: 35%;
+  animation-delay: 3s;
 }
