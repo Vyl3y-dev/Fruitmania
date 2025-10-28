@@ -59,16 +59,7 @@ body {
   height: 400px;
 }
 
-.fullbasket {
-  image-rendering: pixelated;
-}
 
-.fullbasketdisplay {
-  width:960px;
-  height: 160px;
-  position: relative;
-  bottom: 160px;
-}
 
 /* MenuScreen Stuff css */
 
@@ -98,12 +89,37 @@ body {
   position: absolute;
   top: 250px;
   left: 372px;
+  z-index: 10;
+}
+
+.start {
   font-family:'Press Start 2P', monospace;
   font-weight: 400px;
-  font-size: 32px;;
+  font-size: 32px;
+  padding: 1rem 2rem;
   color: white;
   text-shadow: 2px 2px 2px #000;
-  z-index: 10;
+  background-color:  rgb(226, 22, 90);
+  border-radius: 1rem;
+  box-shadow: 0 9px  rgb(110, 11, 44);
+  border: none;
+}
+
+.start:active{
+  box-shadow: 0 0 rgb(110, 11, 44);
+  transform: translateY(4px);
+}
+
+.fullbasket {
+  image-rendering: pixelated;
+}
+
+.fullbasketdisplay {
+  width:192px;
+  height: 96px;
+  position: relative;
+  bottom: 96px;
+  border-radius: 1rem;
 }
 
 /* fruit rain in menu screen */
@@ -122,7 +138,7 @@ body {
   width: 64px;
   height: 64px;
   image-rendering: pixelated;
-  animation: fall 3s linear infinite;
+  animation: fall 5s linear infinite;
 }
 
 @keyframes fall {
@@ -130,7 +146,7 @@ body {
     transform: translateY(-32px);
   }
   100% {
-    transform: translateY(600px);
+    transform: translateY(432px);
   }
 }
 
@@ -140,11 +156,11 @@ body {
 }
 .fruit:nth-child(2) {
   left: 50%;
-  animation-delay: .5s;
+  animation-delay: 1s;
 }
 .fruit:nth-child(3) {
   left: 75%;
-  animation-delay: 1s;
+  animation-delay: .5s;
 }
 .fruit:nth-child(4) {
   left: 60%;
@@ -156,5 +172,9 @@ body {
 }
 .fruit:nth-child(6) {
   left: 35%;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
+}
+.fruit:nth-child(7) {
+  left: 85%;
+  animation-delay: 1.5s;
 }

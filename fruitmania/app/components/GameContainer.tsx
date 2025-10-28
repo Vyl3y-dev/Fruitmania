@@ -23,9 +23,7 @@ export default function GameContainer({children}: GameContainerProps) {
         <img src="/assets/LittleVyleyHoldingPeaches.gif" className="vyleydisplay" alt="vyley character"/>
       </div>
     </div>
-    <div className="fullbasket">
-      <img src="/assets/FullBasketPeaches.png" className="fullbasketdisplay" alt="Basket of peaches"/>
-    </div>
+    
     </div>
     );
 }

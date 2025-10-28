@@ -5,11 +5,11 @@ import GameContainer from "./components/GameContainer";
 import MenuScreen from "./components/MenuScreen";
 
 export default function Home() {
-  
+  const [screen, setScreen] = useState("menu");
 
   return (
     <GameContainer>
-      <MenuScreen></MenuScreen>
+       {screen === "menu" && <MenuScreen onStart={() => setScreen("game")} />}
     </GameContainer>
   );
 }
