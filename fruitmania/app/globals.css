@@ -1,5 +1,6 @@
 body {
   background-color: rgba(248, 64, 172, 0.74);
+  overflow: hidden;
 }
 
 
@@ -10,6 +11,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-items: center;
+  
 }
 
 .title {
@@ -71,8 +73,6 @@ body {
 .fruitmenubg {
   width: 960px;
   height: 540px;
-
-  
   position: relative;
 }
 
@@ -143,7 +143,7 @@ body {
 
 @keyframes fall {
   0% {
-    transform: translateY(-32px);
+    transform: translateY(-64px);
   }
   100% {
     transform: translateY(432px);
@@ -177,4 +177,58 @@ body {
 .fruit:nth-child(7) {
   left: 85%;
   animation-delay: 1.5s;
+}
+
+
+/* GameplayScreen css */
+.gamebg {
+  image-rendering: pixelated;
+  
+}
+
+.gamebgdisplay {
+  width: 960px;
+  height: 540px;
+
+
+  position: relative;
+}
+
+.player {
+  position: absolute;
+  bottom: 64px;
+  left:0;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+.playerdisplay {
+  width: 96px;
+  height: 96px;
+  
+  
+}
+
+.thrower {
+  position: relative;
+  image-rendering: pixelated;
+  bottom:464px;
+  left:672px;
+}
+
+.throwerdisplay {
+  width: 64px;
+  height: 64px;
+  
+}
+
+.fruitstothrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+
+.thrownitemsdisplay {
+  
+  image-rendering: pixelated;
 }

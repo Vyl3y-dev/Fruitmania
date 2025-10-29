@@ -1,5 +1,5 @@
 
-export default function MenuScreen({ onStart }) {
+export default function MenuScreen() {
   return (
     <div className="menuscreen">
       <div className="menubg">
@@ -18,7 +18,7 @@ export default function MenuScreen({ onStart }) {
         <img src="/assets/FruitmaniaTITLE.png" className="fruitmenutitle" alt="Fruitmania Menu Title"/>
       </div>
       <div className="menuoptions">
-        <button className="start" onClick={onStart}>START</button>
+        <button className="start" >START</button>
       </div>
       <div className="fullbasket">
       <img src="/assets/FullBasketPeaches.png" className="fullbasketdisplay" alt="Basket of peaches"/>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import GameContainer from "./components/GameContainer";
+import GameplayScreen from "./components/Gameplay";
 import MenuScreen from "./components/MenuScreen";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <GameContainer>
-       {screen === "menu" && <MenuScreen onStart={() => setScreen("game")} />}
+       <GameplayScreen></GameplayScreen>
     </GameContainer>
   );
 }
