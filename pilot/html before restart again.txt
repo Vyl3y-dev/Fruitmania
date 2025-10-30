@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fruitmania</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Yoan! It's working!</h1>
+<button id="startBtn">Start Game</button>
+<div id="gamespace">
+    <div id="fruitsContainer"></div>
+    <img class="bgdisplay" src="assets/FruitmaniaBG.png" alt="" >
+    <div id="thrower">
+        <img class="throwerdisplay" src="assets/LittleVyleyHoldingPeaches.gif" alt="">
+    </div>
+    <div id="player">
+        <img class="playerdisplay" src="assets/LittleOniHoldingBasketFloating.gif" alt="">
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
