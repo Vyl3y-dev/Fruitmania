@@ -7,7 +7,7 @@ export class Player extends PhysicalObject {
         el.className = "player"; //+ applies CSS style
         super(el); //--> passes element to parent constructors
         this.speed = 5; //set speed
-        this.setPosition(170, 400); //set position
+        this.setPosition(170, 300); //set position
         this.alive = true; //is alive
         this.health = 3; //has 3 hearts
     }
