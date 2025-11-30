@@ -4,21 +4,28 @@ export class MenuScene {
         this.root.innerHTML = `
             <div class="menu">
                 <div class="menu-title"><img src="../assets/canvasItems/FruitmaniaTITLE.png" alt=""/></div>
-                <div class=""></div>
+                <button id="startButton" class="all-buttons">Start</button>
+                <button id="howtoButton" class="all-buttons">How to Play</button>
+                <button id="hiscoresButton" class="all-buttons">Hi-Scores</button>
+                <button id="creditsButton" class="all-buttons">Credits</button>
             </div>
         `;
 
-        this.keyHandler = (e) => {
-            if (e.code === "Space") {
-                window.sceneManager.changeScene("game");
-            }
+        const btn = document.getElementById("startButton");
+
+        this.clickHandler = () => {
+            window.sceneManager.changeScene("game");
         };
-        document.addEventListener("keydown", this.keyHandler);
+
+        btn.addEventListener("click", this.clickHandler);
+
     }
 
     update(dt) { /* menu doesn’t need updates */ }
 
     cleanup() {
-        document.removeEventListener("keydown", this.keyHandler);
+        const btn = document.getElementById("startButton");
+        btn?.removeEventListener("click", this.clickHandler);
+
     }
 }

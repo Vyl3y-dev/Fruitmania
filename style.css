@@ -6,12 +6,12 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom, #a0e9ff, #ffffff);
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: 'Press Start 2P';
 }
 
 .game-title {
   position: absolute;
-  top: 10px;
+  top: 5px;
   image-rendering: pixelated;
 
 }
@@ -23,22 +23,28 @@ body {
 
 #game {
   position: relative;
-  width: 640px;
-  height: 384px;
+  width: 960px;
+  height: 576px;
   border: 4px solid #444;
   overflow: hidden;
-  image-rendering: pixelated;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
 /* Menu Screen CSS */
 
+.menu {
+  background-image: url('assets/canvasItems/MenuBackground_wBorder.png');
+  width: inherit;
+  height: inherit;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .menu-title {
   position: absolute;
-  top: 10px;
-  left: 160px;
+  top: 128px;
+  left: 320px;
   image-rendering: pixelated;
 
 }
@@ -46,4 +52,65 @@ body {
 .menu-title img {
   width: 320px;
   height: 64px;
+   animation: bounce 0.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+.all-buttons {
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+   background: linear-gradient(135deg, #a0e9ff, #ffffff);
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 4px 12px black;
+}
+
+.all-buttons:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(255, 150, 200, 0.8);
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.all-buttons {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+#startButton {
+  position: absolute;
+  top: 208px;
+  left: 416px;
+}
+
+#howtoButton {
+  position: absolute;
+  top: 272px;
+  left: 364px;
+}
+
+#hiscoresButton {
+  position: absolute;
+  top: 336px;
+  left: 386px;
+}
+
+#creditsButton {
+  position: absolute;
+  top: 400px;
+  left: 406px;
 }
