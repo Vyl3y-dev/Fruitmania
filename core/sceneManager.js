@@ -30,9 +30,10 @@ export class SceneManager {
         }
     }
 
-    draw(ctx) {
-        if (this.currentScene && this.currentScene.draw) {
-            this.currentScene.draw(ctx);
-        }
+    draw() {
+    if (this.currentScene && this.currentScene.draw) {
+        this.currentScene.draw();
     }
+}
+
 }
