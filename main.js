@@ -5,7 +5,6 @@ import { MenuScene } from "./scenes/menu.js";
 import { GameScene } from "./scenes/game.js";
 
 const sceneManager = new SceneManager();
-window.sceneManager = sceneManager;
 
 // register scenes
 sceneManager.register("menu", MenuScene);

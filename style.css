@@ -61,6 +61,7 @@ body {
   100% { transform: translateY(0); }
 }
 
+/* All buttons display like this */
 
 .all-buttons {
   padding: 12px 28px;
@@ -91,6 +92,8 @@ body {
   animation: pulse 2s ease-in-out infinite;
 }
 
+/* MENU buttons specifically */
+
 #startButton {
   position: absolute;
   top: 208px;
@@ -113,4 +116,18 @@ body {
   position: absolute;
   top: 400px;
   left: 406px;
+}
+
+/* Gameplay scene elements */
+
+.gameplay-area::before {
+  content: "";
+  background-image: url('assets/canvasItems/FruitmaniaMainArena_woForeground_wAnimation_wLovers_320320.gif');
+  width: inherit;
+  height: inherit;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+   opacity: 0.4;
+   z-index: -1;
 }

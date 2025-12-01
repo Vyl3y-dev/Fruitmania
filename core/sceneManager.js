@@ -7,8 +7,9 @@ export class SceneManager {
 
 // helps know what exists
     register(name, sceneClass) {
-        this.scenes[name] = new sceneClass();
-    }
+    this.scenes[name] = new sceneClass(this); // pass this manager
+}
+
 
 // clean transitions, fresh starts, no leftover objects from old scenes
     changeScene(name){

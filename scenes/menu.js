@@ -1,4 +1,9 @@
 export class MenuScene {
+
+    constructor(manager) {
+        this.manager = manager;
+    }
+
     init() {
         this.root = document.getElementById("game");
         this.root.innerHTML = `
@@ -14,7 +19,8 @@ export class MenuScene {
         const btn = document.getElementById("startButton");
 
         this.clickHandler = () => {
-            window.sceneManager.changeScene("game");
+            this.manager.changeScene("game");
+
         };
 
         btn.addEventListener("click", this.clickHandler);

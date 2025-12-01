@@ -2,9 +2,11 @@ export class GameScene {
     init() {
         this.root = document.getElementById("game");
         this.root.innerHTML = `
-            <div id="gameplay" class="gameplay-area"></div>
-            <div id="oni"></div>
-            <div id="peach"></div>
+            <div id="gameplay" class="gameplay-area">
+            <div id="bluebrick" class="platform"></div>
+            <div id="purplebrick" class="platform"></div>
+            <div id="redbrick" class="platform"></div>
+            </div>
         `;
 
         // later: movement, spawning, collision, etc.
