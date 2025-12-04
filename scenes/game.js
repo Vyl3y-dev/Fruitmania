@@ -3,8 +3,9 @@ export class GameScene {
         this.root = document.getElementById("game");
         this.root.innerHTML = `
             <div id="gameplay" class="gameplay-area">
+            <div id="vyley" class="character"></div>
             <div id="bluebrick" class="platform"></div>
-            <div id="purplebrick" class="platform"></div>
+            <div id="oni" class="character"></div>
             <div id="redbrick" class="platform"></div>
             </div>
         `;

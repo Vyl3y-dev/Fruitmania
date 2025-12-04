@@ -23,6 +23,7 @@ body {
 
 #game {
   position: relative;
+  top: 15px;
   width: 960px;
   height: 576px;
   border: 4px solid #444;
@@ -130,4 +131,62 @@ body {
   background-size: cover;
    opacity: 0.4;
    z-index: -1;
+}
+
+#bluebrick {
+  position: absolute;
+  background-image: url("assets/canvasItems/BlueBrickPlatformForVyley.png");
+  width:960px;
+  height:64px;
+  top: 64px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#redbrick {
+  position: absolute;
+  background-image: url("assets/canvasItems/RedBrickPlatformForOni.png");
+  width:960px;
+  height:96px;
+  bottom:0px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Entities  */
+
+#oni {
+  position: absolute;
+  background: url("assets/sprites/oni/LittleOniFloatingIdle.png") 0 0;
+  width:64px;
+  height:64px;
+  bottom:80px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: oniIdle 0.7s steps(7) infinite;
+}
+
+@keyframes oniIdle {
+  from { background-position: 0; }
+  to   { background-position: -448px; }
+}
+
+#vyley {
+  position: absolute;
+  background: url("assets/sprites/vyley/LittleVyleyIdle.png") 0 0;
+  width:64px;
+  height:64px;
+  top:0px;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: vyleyIdle 01.5s steps(6) infinite;
+}
+
+@keyframes vyleyIdle {
+  from { background-position: 0; }
+  to   { background-position: -384px; }
 }
